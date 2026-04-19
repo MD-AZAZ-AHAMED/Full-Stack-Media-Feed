@@ -1,105 +1,191 @@
-*{
-  margin: 0%;
-  padding: 0%;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-
 }
 
-html,
-body,
-#root{
-  height:100%;
-  width:100%;
+/* Full screen */
+html, body, #root {
+  height: 100%;
+  width: 100%;
 }
 
-html{
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #e3ecf3, #f8fafc);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
-.create-post-section{
+
+/* ================= CREATE POST ================= */
+
+.create-post-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   justify-content: center;
-  height:100%;
-  width:100%;
-  background-color: #f0f2f5;
-}
-
-.create-post-section form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-  background-color: #b3ccd7;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.create-post-section input,
-.create-post-section textarea{
-  width: 300px;
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #7895dc;
-  border-radius: 4px;
-}
-
-.create-post-section button{
-  padding: 10px 20px;
-  background-color: #7895dc;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
-.feed-section{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: start;
-  height:100%;
-  width:100%;
-  background-color: #f0f2f5;
+  min-height: 100vh;
   padding: 20px;
 }
-.feed-section button{
+
+/* Card style */
+.create-post-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 30px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  width: 100%;
+  max-width: 400px;
+
+  /* Animation */
+  animation: fadeUp 0.6s ease;
+}
+
+/* Inputs */
+.create-post-section input,
+.create-post-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Input focus */
+.create-post-section input:focus,
+.create-post-section textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+}
+
+/* Button */
+.create-post-section button {
+  padding: 12px;
+  width: 100%;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.create-post-section button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+/* ================= FEED ================= */
+
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Feed button */
+.feed-section button {
   padding: 10px 20px;
   background-color: #0b101e;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.post-card{
-  background-color: #d7d7d7;
+.feed-section button:hover {
+  background-color: #1e293b;
+}
+
+/* ================= POST CARD ================= */
+
+.post-card {
+  background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  width: 400px;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  width: 100%;
+  max-width: 500px;
+
+  transition: 0.3s;
+
+  /* Animation */
+  animation: fadeUp 0.5s ease;
 }
 
-.post-card h2{
+/* Hover effect */
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.post-card h2 {
   margin-bottom: 10px;
 }
 
-.post-card img{
+/* Image */
+.post-card img {
   width: 100%;
-  height: auto;
+  border-radius: 10px;
   margin-top: 10px;
-  border-radius: 4px;
 }
 
-.post-card p{
+/* Caption */
+.post-card p {
   margin-top: 10px;
-  font-size: 17px;
-  color: #070d05;
+  font-size: 16px;
+  color: #333;
+}
 
+/* ================= RESPONSIVE ================= */
+
+/* Mobile */
+@media (max-width: 600px) {
+  .create-post-section form {
+    padding: 20px;
+  }
+
+  .post-card {
+    padding: 15px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .post-card {
+    max-width: 90%;
+  }
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
