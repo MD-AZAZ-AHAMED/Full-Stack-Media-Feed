@@ -1,0 +1,105 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+}
+
+html,
+body,
+#root{
+  height:100%;
+  width:100%;
+}
+
+html{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+.create-post-section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  width:100%;
+  background-color: #f0f2f5;
+}
+
+.create-post-section form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  background-color: #b3ccd7;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-section input,
+.create-post-section textarea{
+  width: 300px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #7895dc;
+  border-radius: 4px;
+}
+
+.create-post-section button{
+  padding: 10px 20px;
+  background-color: #7895dc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.feed-section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
+  height:100%;
+  width:100%;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+.feed-section button{
+  padding: 10px 20px;
+  background-color: #0b101e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-card{
+  background-color: #d7d7d7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.post-card h2{
+  margin-bottom: 10px;
+}
+
+.post-card img{
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.post-card p{
+  margin-top: 10px;
+  font-size: 17px;
+  color: #070d05;
+
+}
